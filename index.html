@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Juros Compostos</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-header">
+        <span class="icon">📈</span>
+        <h1>Calculadora de Juros Compostos</h1>
+        <p class="subtitle">Simule seus investimentos e veja o poder dos juros compostos!</p>
+    </div>
+
+    <div class="main-content">
+        <div class="card input-card">
+            <h2><span class="icon">📝</span> Configuração do Investimento</h2>
+
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="investimentoInicial">Valor Inicial (R$)</label>
+                    <input type="number" id="investimentoInicial" min="0" step="0.01" value="1000" placeholder="Ex: 1000">
+                </div>
+
+                <div class="input-group">
+                    <label for="aplicacaoMensal">Aplicação Mensal (R$)</label>
+                    <input type="number" id="aplicacaoMensal" min="0" step="0.01" value="100" placeholder="Ex: 100">
+                </div>
+
+                <div class="input-group">
+                    <label for="jurosAnual">Juros Anual (%)</label>
+                    <input type="number" id="jurosAnual" min="0" step="0.1" value="10" placeholder="Ex: 10">
+                </div>
+
+                <div class="input-group">
+                    <label for="qtdAnos">Período (Anos)</label>
+                    <input type="number" id="qtdAnos" min="1" step="1" value="5" placeholder="Ex: 5">
+                </div>
+
+                <div class="input-group">
+                    <label for="reinvestimento">Reinvestimento (%)</label>
+                    <input type="number" id="reinvestimento" min="0" max="100" step="0.01" value="80" placeholder="Ex: 80">
+                </div>
+
+                <div class="input-group">
+                    <label for="ficacao">Retirada (%)</label>
+                    <input type="number" id="ficacao" min="0" max="100" step="0.01" value="20" placeholder="Ex: 20">
+                </div>
+            </div>
+
+            <button id="calcularBtn">Calcular Investimento</button>
+        </div>
+
+        <div class="card results-card">
+            <h2><span class="icon">📊</span> Resultados da Simulação</h2>
+
+            <div class="summary-results">
+                <div class="summary-item">
+                    <p>Montante Final</p>
+                    <p class="result-value" id="montanteFinal">R$ 0,00</p>
+                </div>
+                <div class="summary-item">
+                    <p>Período Total</p>
+                    <p class="result-value" id="periodoTotal">0 meses</p>
+                </div>
+            </div>
+
+            <div class="chart-placeholder">
+                <p>📈 Evolução do Investimento</p>
+                <div id="chartContainer">
+                    <p style="color: #666; font-size: 0.9rem; margin: 20px 0;">
+                        Clique em "Calcular Investimento" para ver a evolução do seu montante
+                    </p>
+                </div>
+            </div>
+
+            <div class="detailed-results-toggle">
+                <button id="toggleDetailedResultsBtn" class="secondary-btn">Ver Detalhes Mensais</button>
+            </div>
+
+            <div id="detailedResults" class="detailed-results-hidden">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
