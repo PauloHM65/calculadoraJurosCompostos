@@ -7,7 +7,7 @@ COPY index.css /usr/share/nginx/html/
 COPY script.js /usr/share/nginx/html/
 
 # Expose port 80, which Nginx listens on by default
-EXPOSE 80
+EXPOSE 5569
 
 # Command to run Nginx when the container starts
 CMD ["nginx", "-g", "daemon off;"]

@@ -61,10 +61,10 @@ Você pode facilmente executar esta aplicação em um contêiner Docker:
     ```
 4.  **Execute o contêiner**:
     ```bash
-    docker run -p 8080:80 calculadora-juros-compostos
+    docker run -p 5569:5569 calculadora-juros-compostos
     ```
-    Isso mapeará a porta 8080 da sua máquina local para a porta 80 do contêiner.
-5.  **Acesse a aplicação**: Abra seu navegador e vá para `http://localhost:8080`.
+    Isso mapeará a porta 5569 da sua máquina local para a porta 5569 do contêiner.
+5.  **Acesse a aplicação**: Abra seu navegador e vá para `http://localhost:5569`.
 
 ## Contribuição
 
